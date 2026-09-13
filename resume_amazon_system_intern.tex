@@ -1,0 +1,157 @@
+%-------------------------
+% Tailored Systems Development / SWE Resume
+% Compiles cleanly with pdflatex
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+% Ensure PDF is machine readable / ATS parsable
+\pdfgentounicode=1
+
+% Adjust Margins for Single Page Fit
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, label=\raisebox{0.15ex}{\tiny$\bullet$}, itemsep=1.5pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Thiyatira Reni N} \\ \vspace{4pt}
+    \small Chennai, India \ $|$ \ 
+    \href{tel:+917010399927}{\faPhone\ +91-7010399927} \ $|$ \ 
+    \href{mailto:thiyatira@gmail.com}{\faEnvelope\ thiyatira@gmail.com} \\ \vspace{3pt}
+    \href{https://www.linkedin.com/in/thiyatira-reni-n-19668b384/}{\faLinkedin\ \underline{linkedin.com/in/thiyatira-reni-n}} \ $|$ \ 
+    \href{https://github.com/thiyatira}{\faGithub\ \underline{github.com/thiyatira}} \ $|$ \ 
+    \href{https://leetcode.com/u/thiyatira/}{\faCode\ \underline{leetcode.com/u/thiyatira}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {SRM Institute of Science and Technology}{Chennai, India}
+      {Bachelor of Technology in Computer Science and Engineering \textbf{(CGPA: 9.46 / 10.0)}}{Jul 2025 -- May 2029}
+    \resumeSubheading
+      {Green Park International Sr. Sec. School}{Namakkal, India}
+      {All India Senior School Certificate Examination (CBSE XII) --- \textbf{88.4\%}}{2025}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.0in, label={}, itemsep=2pt]
+    \small{\item{
+     \textbf{Languages:}{ C++, C, Python, Bash Scripting, SQL (PostgreSQL/MySQL)} \\
+     \textbf{Systems \& Architecture:}{ Linux/Unix CLI, POSIX Threads, Socket Programming, Concurrency, Virtual Memory, IPC} \\
+     \textbf{Core CS Fundamentals:}{ Data Structures \& Algorithms (DSA), Operating Systems, Object-Oriented Design (OOD), Networks} \\
+     \textbf{Developer Tools \& Cloud:}{ Git, GitHub, VS Code, Linux Utilities (top, grep, awk, strace), Cloud Fundamentals}
+    }}
+ \end{itemize}
+
+%-----------PROJECTS-----------
+\section{Technical Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{Concurrent Multi-Threaded HTTP Server} $|$ \emph{C++, POSIX Sockets, Pthreads, Linux}}{C++, Systems Programming}
+          \resumeItemListStart
+            \resumeItem{Engineered a high-performance HTTP/1.1 web server in C++ using raw POSIX sockets and non-blocking I/O multiplexing.}
+            \resumeItem{Implemented a fixed-size worker-thread pool architecture to handle hundreds of concurrent requests without blocking operations.}
+            \resumeItem{Parsed and validated HTTP requests (GET/POST), MIME types, and static assets with custom memory-safe buffering.}
+            \resumeItem{Utilized Linux system monitoring utilities (\texttt{valgrind}, \texttt{strace}) to detect memory leaks and profile system call overhead.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Linux System Health \& Process Automation Daemon} $|$ \emph{Python, Linux CLI, Bash, Cron}}{Python, Infrastructure}
+          \resumeItemListStart
+            \resumeItem{Built a background daemon tracking core OS health metrics (CPU utilization, memory leaks, disk I/O, zombie processes) via \texttt{/proc}.}
+            \resumeItem{Automated threshold-based alert dispatching and recovery routines to kill runaway processes and free system resources.}
+            \resumeItem{Designed configurable shell scripts and Cron jobs for zero-downtime execution and automated rotational logging.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Autonomous Agentic Task Automation Pipeline} $|$ \emph{Python, LLM Tool-Calling, REST APIs}}{Hackathon Project}
+          \resumeItemListStart
+            \resumeItem{Developed an autonomous execution pipeline leveraging Agentic AI to decompose complex user prompts into discrete system actions.}
+            \resumeItem{Integrated external API endpoints and programmatic shell execution with strict validation and sandboxed output sandboxes.}
+            \resumeItem{Awarded Pre-Finalist spot at \textbf{Resonate 2.0} (Microsoft Student Ambassadors) for rapid MVP deployment within 25 hours.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS & COMPETITIONS-----------
+\section{Achievements \& Honors}
+    \resumeSubHeadingListStart
+        \resumeItemListStart
+            \resumeItem{\textbf{Flipkart GRIDs 8.0 Pre-Finalist:} Qualified for Round 3, ranking in the \textbf{Top 1\%} ($\approx$2,000 out of 200,000+ candidates nationwide) across technical problem-solving and computer science fundamentals.}
+            \resumeItem{\textbf{Academic Distinction:} Achieved \textbf{'O' (Outstanding) Grade} (top score band) across 4 core engineering courses at SRMIST.}
+            \resumeItem{\textbf{Resonate 2.0 Hackathon:} Built and pitched production-ready prototypes in the Agentic AI track in an offline 25-hr sprint.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS & LEADERSHIP-----------
+\section{Certifications \& Leadership}
+    \resumeSubHeadingListStart
+        \resumeItemListStart
+            \resumeItem{\textbf{Generative AI Systems Architecture:} Completed 2-day technical workshop on LLMs and agent frameworks at IIT Madras Research Park.}
+            \resumeItem{\textbf{National Service Scheme (NSS) Volunteer:} Led logistical planning and volunteer coordination across community initiatives and medical camps, managing groups of 200+ participants.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\end{document}

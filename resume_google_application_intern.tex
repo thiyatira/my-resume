@@ -1,0 +1,162 @@
+%-------------------------
+% Google Application Engineering Intern - Tailored Resume
+% Author: Thiyatira Reni N
+% Compiles cleanly with pdflatex
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+% Ensure PDF is machine readable / ATS parsable
+\pdfgentounicode=1
+
+% Page Margins (Calibrated for strict 1-page layout)
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-0.65in}
+\addtolength{\textheight}{1.3in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section Titles Formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+
+% Custom Formatting Commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, label=\raisebox{0.15ex}{\tiny$\bullet$}, itemsep=1.5pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADER----------
+\begin{center}
+    {\Huge \scshape Thiyatira Reni N} \\ \vspace{3pt}
+    \small Chennai, India \ $|$ \ 
+    \href{tel:+917010399927}{\faPhone\ +91-7010399927} \ $|$ \ 
+    \href{mailto:thiyatira@gmail.com}{\faEnvelope\ thiyatira@gmail.com} \\ \vspace{3pt}
+    \href{https://www.linkedin.com/in/thiyatira-reni-n-19668b384/}{\faLinkedin\ \underline{linkedin.com/in/thiyatira-reni-n}} \ $|$ \ 
+    \href{https://github.com/thiyatira}{\faGithub\ \underline{github.com/thiyatira}} \ $|$ \ 
+    \href{https://leetcode.com/u/thiyatira/}{\faCode\ \underline{leetcode.com/u/thiyatira}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small{Computer Science undergraduate (\textbf{CGPA 9.46}) with strong foundations in Data Structures \& Algorithms, RESTful API development, and relational database systems. Qualified in the \textbf{Top 1\% of Flipkart GRIDs 8.0} with experience in Python, C++, and workflow automation. Seeking an Application Engineering Internship to design scalable internal tools, automate enterprise business processes, and engineer modular backend services.}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {SRM Institute of Science and Technology}{Chennai, India}
+      {Bachelor of Technology in Computer Science and Engineering \textbf{(CGPA: 9.46 / 10.0)}}{Expected Jul 2028 / 2029}
+    \resumeSubheading
+      {Green Park International Sr. Sec. School}{Namakkal, India}
+      {All India Senior School Certificate Examination (CBSE XII) --- \textbf{88.4\%}}{2025}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.0in, label={}, itemsep=2pt]
+    \small{\item{
+     \textbf{Languages:}{ Python, C++, Java, SQL (PostgreSQL, MySQL), JavaScript, TypeScript, C} \\
+     \textbf{Enterprise \& Web Services:}{ RESTful APIs, Spring Boot (Fundamentals), FastAPI, JSON, Webhooks, HTTP/1.1} \\
+     \textbf{Core CS Fundamentals:}{ Data Structures \& Algorithms, Object-Oriented Design (OOD), Database Management Systems (DBMS)} \\
+     \textbf{Developer Tools \& Environment:}{ Git, GitHub, Linux/Unix CLI, Postman, Docker (Basics), VS Code}
+    }}
+ \end{itemize}
+
+%-----------PROJECTS-----------
+\section{Application Engineering Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{Enterprise Workflow Automation \& Integration Service} $|$ \emph{Python, FastAPI, PostgreSQL, REST APIs}}{}
+          \resumeItemListStart
+            \resumeItem{Engineered a microservice to automate operational data exchange between internal platforms and third-party SaaS APIs.}
+            \resumeItem{Designed normalized PostgreSQL schemas with indexing, reducing repetitive manual administrative tasks by 80\%.}
+            \resumeItem{Built robust idempotency, webhook validation, and asynchronous retry queues to guarantee zero data loss during network failures.}
+            \resumeItem{Documented comprehensive unit and integration test suites achieving 90\% code coverage with \texttt{pytest} and Postman.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Internal Operations Management Portal} $|$ \emph{TypeScript, React, Node.js/Python, SQL}}{}
+          \resumeItemListStart
+            \resumeItem{Developed a modular internal portal enabling support teams to monitor, query, and audit business operations workflows.}
+            \resumeItem{Implemented secure RESTful API endpoints with role-based access control (RBAC) and structured JSON schema validation.}
+            \resumeItem{Created high-efficiency SQL queries and paginated endpoints to fetch and render multi-thousand-row operational datasets in $<$200ms.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Autonomous Task Orchestration Pipeline} $|$ \emph{Python, Agentic Workflows, REST APIs}}{}
+          \resumeItemListStart
+            \resumeItem{Constructed an agentic execution pipeline translating high-level business logic requests into structured executable tasks.}
+            \resumeItem{Integrated external API endpoints for real-time validation, status reporting, and automatic failure remediation.}
+            \resumeItem{Selected as a Pre-Finalist at \textbf{Resonate 2.0} (Microsoft Student Ambassadors) for rapid end-to-end prototyping within 25 hours.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS & COMPETITIONS-----------
+\section{Achievements \& Honors}
+    \resumeSubHeadingListStart
+        \resumeItemListStart
+            \resumeItem{\textbf{Flipkart GRIDs 8.0 Pre-Finalist:} Qualified for Round 3, ranking in the \textbf{Top 1\%} ($\approx$2,000 out of 200,000+ applicants nationwide) evaluating core algorithmic efficiency and computer science fundamentals.}
+            \resumeItem{\textbf{Academic Distinction:} Awarded \textbf{'O' (Outstanding) Grade} (highest achievable academic tier) across 4 foundational engineering subjects at SRMIST.}
+            \resumeItem{\textbf{Resonate 2.0 Hackathon:} Built and deployed a production-style agentic workflow prototype during a 25-hour hackathon.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS & LEADERSHIP-----------
+\section{Workshops \& Leadership}
+    \resumeSubHeadingListStart
+        \resumeItemListStart
+            \resumeItem{\textbf{Generative AI Systems Architecture Workshop:} Completed intensive hands-on training on LLMs, structured tool calling, and autonomous agents at \textbf{IIT Madras Research Park}.}
+            \resumeItem{\textbf{National Service Scheme (NSS) Coordinator:} Directed logistics, student engagement, and resource distribution across community health and service campaigns, coordinating teams of 200+ volunteers.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\end{document}
