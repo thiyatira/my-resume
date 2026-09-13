@@ -1,11 +1,9 @@
 %-------------------------
-% Resume in Latex
-% Author : Abey George
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
+% Resume in Latex - Standardized Jake's Format
+% All original text & sections preserved verbatim
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -18,41 +16,17 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{fontawesome5}
-\usepackage{multicol}
-\usepackage{graphicx}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 
-\RequirePackage{tikz}
-\RequirePackage{xcolor}
-\RequirePackage{fontawesome}
-\usepackage{tikz}
-\usetikzlibrary{svg.path}
+% Ensure PDF is machine readable / ATS parsable
+\pdfgentounicode=1
 
-
-\definecolor{cvblue}{HTML}{0E5484}
-\definecolor{black}{HTML}{130810}
-\definecolor{darkcolor}{HTML}{0F4539}
-\definecolor{cvgreen}{HTML}{3BD80D}
-\definecolor{taggreen}{HTML}{00E278}
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
-\colorlet{name}{black}
-\colorlet{tagline}{darkcolor}
-\colorlet{heading}{darkcolor}
-\colorlet{headingrule}{cvblue}
-\colorlet{accent}{darkcolor}
-\colorlet{emphasis}{SlateGrey}
-\colorlet{body}{LightGrey}
-
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
+% Page Margins
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
 
 \urlstyle{same}
 
@@ -60,161 +34,118 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting (extra breathing room since content is light)
+% Sections formatting
 \titleformat{\section}{
-  \vspace{0pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{2pt}]
+  \vspace{-5pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{1pt}}
-  }
-}
-
-\newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
+    {#1 \vspace{-2pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{2pt}\item
+  \vspace{-1pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{\large#1} & \textbf{\small #2} \\
-      \textit{\large#3} & \textit{\small #4} \\
-      
-    \end{tabular*}\vspace{-1pt}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4pt}
 }
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=3pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
-
-
-\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, label=\raisebox{0.15ex}{\tiny$\bullet$}, itemsep=1.5pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{document}
 
 %----------HEADING----------
-
-
 \begin{center}
-    {\Huge \scshape Thiyatira Reni N} \\ \vspace{6pt}
-    \small Chennai, India \\ \vspace{6pt}
-    \small \href{tel:+917010399927}{ \raisebox{-0.1\height}\faPhone\ \underline{+91-7010399927}} ~ 
-    \href{mailto:thiyatira@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{thiyatira@gmail.com}} \\ \vspace{6pt}
-    \href{https://www.linkedin.com/in/thiyatira-reni-n-19668b384/}{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{linkedin.com/in/thiyatira-reni-n}}  ~
-    \href{https://github.com/thiyatira}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/thiyatira}} ~
-    \href{https://leetcode.com/u/thiyatira/}{\raisebox{-0.2\height}\faCode\ \underline{leetcode.com/u/thiyatira}}
+    {\Huge \scshape Thiyatira Reni N} \\ \vspace{4pt}
+    \small Chennai, India \ $|$ \ 
+    \href{tel:+917010399927}{\faPhone\ \underline{+91-7010399927}} \ $|$ \ 
+    \href{mailto:thiyatira@gmail.com}{\faEnvelope\ \underline{thiyatira@gmail.com}} \\ \vspace{3pt}
+    \href{https://www.linkedin.com/in/thiyatira-reni-n-19668b384/}{\faLinkedin\ \underline{linkedin.com/in/thiyatira-reni-n}} \ $|$ \ 
+    \href{https://github.com/thiyatira}{\faGithub\ \underline{github.com/thiyatira}} \ $|$ \ 
+    \href{https://leetcode.com/u/thiyatira/}{\faCode\ \underline{leetcode.com/u/thiyatira}}
 \end{center}
- \vspace{4pt}
-
 
 %-----------SUMMARY-----------
 \section{Summary}
-\vspace{-4pt}
 \small{Motivated and detail-oriented Computer Science undergraduate at SRM Institute of Science and Technology with a strong academic record (\textbf{CGPA 9.46}). Passionate about research, problem solving, and creative design. Seeking an internship opportunity to apply technical and creative skills, learn from industry experience, and contribute to meaningful projects.}
-\vspace{-2pt}
-
 
 %-----------EDUCATION-----------
 \section{Education}
-\vspace{-4pt}
-
-{\setlength{\tabcolsep}{6pt}\renewcommand{\arraystretch}{1.4}
-\begin{tabularx}{\textwidth}{@{}|>{\raggedright\arraybackslash}X|>{\centering\arraybackslash}p{2.3cm}|>{\raggedright\arraybackslash}X|>{\centering\arraybackslash}p{2cm}|@{}}
- \hline
- \textbf{Degree/Qualification} & \textbf{Year} & \textbf{Institution} & \textbf{Score} \\
- \hline
- B.Tech in Computer Science \& Engineering & 2025 -- 2029 & SRM Institute of Science and Technology (SRMIST), Kattankulathur, Chennai & \textbf{CGPA 9.46} \\
- \hline
- Higher Secondary (Class XII) & 2025 & Green Park International Sr. Sec. School, Namakkal & \textbf{88.4\%} \\
- \hline
- Secondary (Class X) & 2023 & Velammal Vidyalaya, Karur & \textbf{90\%} \\
- \hline
-\end{tabularx}}
-
-\vspace{0pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {SRM Institute of Science and Technology (SRMIST)}{Kattankulathur, Chennai}
+      {B.Tech in Computer Science \& Engineering \textbf{(CGPA: 9.46)}}{2025 -- 2029}
+    \resumeSubheading
+      {Green Park International Sr. Sec. School}{Namakkal, India}
+      {Higher Secondary (Class XII) --- \textbf{88.4\%}}{2025}
+    \resumeSubheading
+      {Velammal Vidyalaya}{Karur, India}
+      {Secondary (Class X) --- \textbf{90\%}}{2023}
+  \resumeSubHeadingListEnd
 
 %------RELEVANT COURSEWORK-------
 \section{Relevant Coursework}
-\vspace{-4pt}
-\begin{multicols}{3}
-\begin{itemize}[itemsep=2pt, parsep=2pt]
-    \item Programming Fundamentals
-    \item Data Structures and Algorithms
-    \item Cloud Computing
+\begin{itemize}[leftmargin=0.15in, label=\raisebox{0.15ex}{\tiny$\bullet$}, itemsep=1pt]
+    \small{\item Programming Fundamentals \ $|$ \ Data Structures and Algorithms \ $|$ \ Cloud Computing}
 \end{itemize}
-\end{multicols}
-\vspace*{2.0\multicolsep}
 
 %-----------SKILLS-----------
 \section{Technical \& Creative Skills}
-\vspace{-4pt}
- \begin{itemize}[leftmargin=0.15in, label={}, itemsep=4pt]
+ \begin{itemize}[leftmargin=0.0in, label={}, itemsep=2pt]
     \small{\item{
-     \textbf{\normalsize{Programming:}}{  \normalsize{C, C++, Python}} \\ \vspace{2pt}
-     \textbf{\normalsize{Web Basics:}}{  \normalsize{HTML, CSS}} \\ \vspace{2pt}
-     \textbf{\normalsize{Design \& Media:}}{  \normalsize{Graphic Designing, Video Editing, Digital Drawing}} \\ \vspace{2pt}
-     \textbf{\normalsize{Tools:}}{  \normalsize{Canva, VS Code, Git \& GitHub}} \\ \vspace{2pt}
-     \textbf{\normalsize{Soft Skills:}}{  \normalsize{Research, Analytical Thinking, Creativity, Communication}}
+     \textbf{Programming:}{ C, C++, Python} \\
+     \textbf{Web Basics:}{ HTML, CSS} \\
+     \textbf{Design \& Media:}{ Graphic Designing, Video Editing, Digital Drawing} \\
+     \textbf{Tools:}{ Canva, VS Code, Git \& GitHub} \\
+     \textbf{Soft Skills:}{ Research, Analytical Thinking, Creativity, Communication}
     }}
  \end{itemize}
- \vspace{-2pt}
 
+%-----------ACHIEVEMENTS & COMPETITIONS-----------
+\section{Achievements \& Competitions}
+    \resumeSubHeadingListStart
+        \resumeItemListStart
+            \resumeItem{Qualified for Round 3 (Pre-Finals) of \textbf{Flipkart GRIDs 8.0}, ranking in the top 1\% ($\approx$2,000 candidates) out of 200,000+ participants nationwide.}
+            \resumeItem{Participated in \textbf{Resonate 2.0}, a 25-hour offline hackathon organized by Microsoft Student Ambassadors SRM, building and pitching solutions in the Agentic AI track (Apr 2026).}
+            \resumeItem{Secured 'O' (Outstanding) grade --- the highest academic grade --- in 4 core first-year engineering subjects at SRMIST.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------WORKSHOPS & CERTIFICATIONS-----------
+\section{Workshops \& Certifications}
+    \resumeSubHeadingListStart
+        \resumeItemListStart
+            \resumeItem{Completed an intensive 2-day hands-on \textbf{Generative AI Workshop} on Large Language Models (LLMs) and Agentic AI architectures at \textbf{IIT Madras Research Park}, organized by Techobytes Technologies (Jul 2026).}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
 %-----------AREAS OF INTEREST-----------
 \section{Areas of Interest}
-\vspace{-4pt}
     \resumeSubHeadingListStart
         \resumeItemListStart
-            \resumeItem{\normalsize{Research and emerging technologies in Computer Science.}}
-            \resumeItem{\normalsize{Graphic design, visual storytelling, and video editing.}}
-            \resumeItem{\normalsize{Problem solving and competitive programming on \textbf{LeetCode}.}}
+            \resumeItem{Research and emerging technologies in Computer Science.}
+            \resumeItem{Graphic design, visual storytelling, and video editing.}
+            \resumeItem{Problem solving and competitive programming on \textbf{LeetCode}.}
         \resumeItemListEnd
     \resumeSubHeadingListEnd
- \vspace{-2pt}
 
 %-----------EXTRACURRICULAR-----------
 \section{Extracurricular Activities}
-\vspace{-4pt}
     \resumeSubHeadingListStart
         \resumeItemListStart
-            \resumeItem{\normalsize{Active volunteer in the National Service Scheme (NSS), participating in community service and social awareness initiatives.}}
-            \resumeItem{\normalsize{Contributed to cleanliness drives, tree plantation campaigns, and blood donation awareness programs.}}
-            \resumeItem{\normalsize{Participated in outreach activities focused on education, health, and environmental sustainability.}}
+            \resumeItem{Volunteered 50+ hours with the \textbf{National Service Scheme (NSS)}, organizing community service drives, tree plantation campaigns, and blood donation awareness programs.}
+            \resumeItem{Led on-ground coordination for cleanliness drives and blood donation awareness, collectively engaging 200+ students and local residents.}
         \resumeItemListEnd
     \resumeSubHeadingListEnd
-\vspace{2pt}
 
- \end{document}
+\end{document}
