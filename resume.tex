@@ -54,6 +54,13 @@
     \end{tabular*}\vspace{-4pt}
 }
 
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-4pt}
+}
+
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, label=\raisebox{0.15ex}{\tiny$\bullet$}, itemsep=1.5pt]}
@@ -129,15 +136,26 @@
         \resumeItemListEnd
     \resumeSubHeadingListEnd
 
-%-----------AREAS OF INTEREST-----------
-\section{Areas of Interest}
+%-----------PROJECTS-----------
+\section{Projects}
+\vspace{-4pt}
     \resumeSubHeadingListStart
-        \resumeItemListStart
-            \resumeItem{Research and emerging technologies in Computer Science.}
-            \resumeItem{Graphic design, visual storytelling, and video editing.}
-            \resumeItem{Problem solving and competitive programming on \textbf{LeetCode}.}
-        \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{SRM PYQ --- Exam Question Bank Platform} $|$ \emph{Next.js 15, TypeScript, React 19, Tailwind, KaTeX}}{\href{https://srm-pyq.vercel.app/}{\underline{srm-pyq.vercel.app}}}
+          \resumeItemListStart
+            \resumeItem{Developed a fast, searchable exam repository adopted by \textbf{100+ active users}, cataloging previous year questions across 12+ core courses.}
+            \resumeItem{Integrated KaTeX for mathematical formula/matrix rendering and PrismJS for multi-language code syntax highlighting.}
+            \resumeItem{Built an instant client-side search and filtering engine to query questions by course code, unit, semester, and keywords with $<$50ms latency.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Little Moments --- Browser Photobooth} $|$ \emph{TypeScript, React, MediaPipe, HTML5 Canvas, Tailwind}}{\href{https://lilmom.vercel.app/}{\underline{lilmom.vercel.app}}}
+          \resumeItemListStart
+            \resumeItem{Built a 100\% client-side, privacy-first photobooth supporting front/back camera feeds, 6 real-time filters, and multi-shot strip layouts.}
+            \resumeItem{Integrated Google MediaPipe for on-device palm gesture detection to trigger hands-free countdowns and automated photo capture.}
+            \resumeItem{Leveraged HTML5 Canvas APIs for client-side raster composition and instant PNG downloads with zero server dependencies.}
+          \resumeItemListEnd
     \resumeSubHeadingListEnd
+\vspace{-4pt}
 
 %-----------EXTRACURRICULAR-----------
 \section{Extracurricular Activities}

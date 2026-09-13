@@ -107,32 +107,21 @@
 %-----------PROJECTS-----------
 \section{Technical Projects}
     \resumeSubHeadingListStart
-
       \resumeProjectHeading
-          {\textbf{Concurrent Multi-Threaded HTTP Server} $|$ \emph{C++, POSIX Sockets, Pthreads, Linux}}{C++, Systems Programming}
+          {\textbf{SRM PYQ --- High-Performance Web Repository} $|$ \emph{Next.js 15, React 19, TypeScript, Turbopack}}{\href{https://srm-pyq.vercel.app/}{\underline{Live Demo}}}
           \resumeItemListStart
-            \resumeItem{Engineered a high-performance HTTP/1.1 web server in C++ using raw POSIX sockets and non-blocking I/O multiplexing.}
-            \resumeItem{Implemented a fixed-size worker-thread pool architecture to handle hundreds of concurrent requests without blocking operations.}
-            \resumeItem{Parsed and validated HTTP requests (GET/POST), MIME types, and static assets with custom memory-safe buffering.}
-            \resumeItem{Utilized Linux system monitoring utilities (\texttt{valgrind}, \texttt{strace}) to detect memory leaks and profile system call overhead.}
+            \resumeItem{Engineered a low-latency static content repository adopted by \textbf{100+ active users}, indexed across 12+ academic engineering subjects.}
+            \resumeItem{Optimized client-side bundle performance using Next.js 15 App Router and Turbopack, achieving sub-100ms first-contentful paint.}
+            \resumeItem{Implemented dynamic client-side syntax parsers (KaTeX, PrismJS) to render mathematical equations and multi-language code snippets.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{Linux System Health \& Process Automation Daemon} $|$ \emph{Python, Linux CLI, Bash, Cron}}{Python, Infrastructure}
+          {\textbf{Little Moments --- Browser Media Processing Tool} $|$ \emph{TypeScript, MediaPipe, HTML5 Canvas, Web APIs}}{\href{https://lilmom.vercel.app/}{\underline{Live Demo}}}
           \resumeItemListStart
-            \resumeItem{Built a background daemon tracking core OS health metrics (CPU utilization, memory leaks, disk I/O, zombie processes) via \texttt{/proc}.}
-            \resumeItem{Automated threshold-based alert dispatching and recovery routines to kill runaway processes and free system resources.}
-            \resumeItem{Designed configurable shell scripts and Cron jobs for zero-downtime execution and automated rotational logging.}
+            \resumeItem{Developed a client-side media processor executing real-time video stream filtering and multi-frame raster rendering.}
+            \resumeItem{Integrated MediaPipe computer vision pipelines for real-time edge palm-detection without incurring server inference costs.}
+            \resumeItem{Optimized browser memory usage during multi-shot canvas exports, preventing frame buffer degradation on mobile devices.}
           \resumeItemListEnd
-
-      \resumeProjectHeading
-          {\textbf{Autonomous Agentic Task Automation Pipeline} $|$ \emph{Python, LLM Tool-Calling, REST APIs}}{Hackathon Project}
-          \resumeItemListStart
-            \resumeItem{Developed an autonomous execution pipeline leveraging Agentic AI to decompose complex user prompts into discrete system actions.}
-            \resumeItem{Integrated external API endpoints and programmatic shell execution with strict validation and sandboxed output sandboxes.}
-            \resumeItem{Awarded Pre-Finalist spot at \textbf{Resonate 2.0} (Microsoft Student Ambassadors) for rapid MVP deployment within 25 hours.}
-          \resumeItemListEnd
-
     \resumeSubHeadingListEnd
 
 %-----------ACHIEVEMENTS & COMPETITIONS-----------
